@@ -62,6 +62,13 @@ export const ConverterWidget: React.FC<ConverterWidgetProps> = ({
   // Toast notification for mixed drops
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
+  const showToast = (msg: string) => {
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToastMessage((prev) => (prev === msg ? null : prev));
+    }, 6000);
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Target formats by category
@@ -147,7 +154,7 @@ export const ConverterWidget: React.FC<ConverterWidgetProps> = ({
     });
 
     if (oversizedFiles.length > 0) {
-      alert(
+      showToast(
         isId
           ? `${oversizedFiles.length} file melebihi batas 150MB dan dilewati: ${oversizedFiles.join(', ')}`
           : `${oversizedFiles.length} file(s) exceeded the 150MB limit: ${oversizedFiles.join(', ')}`
@@ -650,7 +657,7 @@ export const ConverterWidget: React.FC<ConverterWidgetProps> = ({
       }, 2000);
     } catch (err) {
       console.error('Failed to create batch ZIP:', err);
-      alert(isId ? 'Gagal membuat arsip ZIP. Mengunduh file satu per satu.' : 'Failed to create ZIP. Downloading files sequentially.');
+      showToast(isId ? 'Gagal membuat arsip ZIP. Mengunduh file satu per satu.' : 'Failed to create ZIP. Downloading files sequentially.');
       for (const item of successItems) {
         await handleBlobDownload(item);
         await new Promise((r) => setTimeout(r, 600));
