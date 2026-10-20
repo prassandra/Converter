@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Google Search & Googlebot Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# Bing Crawler
+User-agent: Bingbot
+Allow: /
+
+# XML Sitemap
+Sitemap: https://convert.driacom.com/sitemap.xml

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Vibrant Blue Gradient (Brand Colors: #3b82f6 -> #2563eb -> #0284c7) -->
+    <linearGradient id="brandBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Top Highlight Curve for Modern App Depth -->
+    <linearGradient id="appGleam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Inner Border Glow -->
+    <linearGradient id="rimGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bfdbfe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base for App Icon / Favicon -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#brandBg)" />
+  <rect x="16" y="16" width="480" height="240" rx="112" fill="url(#appGleam)" />
+  <rect x="22" y="22" width="468" height="468" rx="106" fill="none" stroke="url(#rimGlow)" stroke-width="6" />
+
+  <!-- Bold Universal Converter Transformation Arrows (High Contrast Pure White) -->
+  <!-- Top Arc (Clockwise Left to Right) -->
+  <path
+    d="M 152 256 C 152 176 210 128 290 128 C 344 128 388 156 408 198"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="48"
+    stroke-linecap="round"
+  />
+  <!-- Top Arrowhead -->
+  <polygon
+    points="440,200 392,136 370,216"
+    fill="#ffffff"
+  />
+
+  <!-- Bottom Arc (Clockwise Right to Left) -->
+  <path
+    d="M 360 256 C 360 336 302 384 222 384 C 168 384 124 356 104 314"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="48"
+    stroke-linecap="round"
+  />
+  <!-- Bottom Arrowhead -->
+  <polygon
+    points="72,312 120,376 142,296"
+    fill="#ffffff"
+  />
+
+  <!-- Central Hub / Precision Core Indicator -->
+  <circle cx="256" cy="256" r="30" fill="#ffffff" />
+  <circle cx="256" cy="256" r="15" fill="#2563eb" />
+</svg>

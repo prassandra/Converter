@@ -1,0 +1,6 @@
+{
+  "name": "DriaConvert - Multi-Format Media & File Converter",
+  "description": "Konversi File Apapun Secara Gratis, Cepat & Aman. Ubah format video, audio, gambar, dan dokumen Anda dalam hitungan detik tanpa instalasi software tambahan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
